@@ -1,0 +1,121 @@
+body{
+    background:rgb(58,58,58);
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    padding:0;
+
+}
+
+header{
+
+    background:black;
+    padding: 20px;
+    height:400px;
+    text-align:center;
+    background-image: url("images/hero.jpg");
+    background-size:100%;
+    background-position:center;
+
+}
+
+header a{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-top: 40px;
+  }
+
+header .logo a{
+      background-image: url("images/logo.png");
+      background-size:300px;
+      display:inline-block;
+      width:300px;
+      text-indent:-9999999px;
+      height:140px;
+      position: relative;
+      top:-40px;
+      background-repeat:no-repeat;
+
+
+  }
+
+header .Mobile {
+    display:none;
+}
+
+nav ul{
+    margin:0;
+    padding:0;
+    list-style-type: none;
+}
+nav li{
+    display:inline-block;
+    margin-right:20px;
+}
+
+/* Responsive rules */
+@media screen and (max-width: 715px) {
+
+
+ header{
+     height:250px;
+     background-position: 0 -30px;
+ }
+
+ header .Mobile{
+     display:inline-block;
+ }
+
+ header .Desktop{
+     display:None;
+ }
+}
+
+
+@media screen and (max-width: 500px) {
+
+header{
+    height:200px;
+    background-position: 0px;
+}
+
+}
+
+
+
+.features{
+    background:white;
+    color:gray;
+    padding: 25px;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+.features figure{
+
+    width:200px;
+    text-align:center;
+    margin:auto;
+    text-transform: uppercase;
+}
+
+.features figure img{
+border: 1px solid white;
+width:200px;
+border-radius:50%;
+box-shadow:gray 0 0 10px;
+}
+
+
+
+footer{
+    background:black;
+    color:gray;
+    font-size:12px;
+    text-align:center;
+    padding: 10px;
+}
+

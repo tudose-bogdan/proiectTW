@@ -1,0 +1,17 @@
+.Text{
+    height: 400px;
+    width: 500px;
+    background: rgb(58,58,58);
+
+    position: fixed;
+    top: 50%;
+    left: 70%;
+    margin-top: -100px;
+    margin-left: -200px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size:25px;
+}
+
+
+
