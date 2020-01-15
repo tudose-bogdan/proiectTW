@@ -1,0 +1,413 @@
+
+.text-js{
+  opacity: 0;
+}
+.cursor{
+  display: block;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: -5px;
+  width: 2px;
+  /* Change colour of Cursor Here */
+  background-color: white;
+  z-index: 1;
+  animation: flash 0.5s none infinite alternate;
+}
+@keyframes flash{
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+/* text animation */
+.link {
+	outline: none;
+	text-decoration: none;
+	position: relative;
+	font-size: 3em;
+	line-height: 1;
+	color: #9e9ba4;
+	display: inline-block;
+}
+
+.link--ham {
+    overflow: hidden;
+    text-align:center;
+    text-transform: uppercase;
+    color:gray;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size:20px;
+}
+
+.link--ham:hover {
+	color: #b2b0a9;
+}
+
+.link--ham::after {
+	content: '';
+	position: absolute;
+	height: 16px;
+	width: 100%;
+	top: 50%;
+	margin-top: -8px;
+	right: 0;
+	background: #F9F9F9;
+	transform: translate3d(-100%,0,0);
+	transition: transform 0.4s;
+	transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+}
+
+.link--ham:hover::after {
+	transform: translate3d(100%,0,0);
+}
+
+.link--ham::before {
+	content: attr(data-letters);
+	position: absolute;
+	z-index: 2;
+	overflow: hidden;
+	color: #424242;
+	white-space: nowrap;
+	width: 0%;
+	transition: width 0.4s 0.3s;
+}
+
+.link--ham:hover::before {
+	width: 100%;
+}
+
+/* end text animation */
+
+header{
+
+    background:black;
+    padding: 20px;
+    height:400px;
+    text-align:center;
+    background-image: url("../images/hero.jpg");
+    background-size:100%;
+    background-position:center;
+
+}
+
+header a{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-top: 40px;
+  }
+
+header .logo a{
+      background-image: url("../images/logo.png");
+      background-size:300px;
+      display:inline-block;
+      width:300px;
+      text-indent:-9999999px;
+      height:140px;
+      position: relative;
+      top:-40px;
+      background-repeat:no-repeat;
+
+
+  }
+
+header .Mobile {
+    display:none;
+}
+
+
+body{
+    background:rgb(68,68,68);
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    padding:0;
+
+}
+
+
+#don, #dof{
+background:burlywood;
+border: 3px solid black;
+width:100px;
+height:50px;
+
+
+}
+nav ul{
+    position: relative;
+    margin:0;
+    padding:0;
+    list-style-type: none;
+}
+nav li{
+    display:inline-block;
+    margin-right:20px;
+    letter-spacing: 2px;
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
+}
+
+nav li a:hover{
+   color:brown;
+   font-size: 18px;
+   text-shadow: 0px -2px 0px rgba(0,0,0,1), 0 0 5px rgba(255,255,255,0.8),0 -4px 15px rgba(255,255,255,0.5);
+   box-shadow: 0 0 10px rgba(70,2,250,1);
+}
+
+
+/* Responsive rules */
+@media screen and (max-width: 715px) {
+
+.TextLocation{
+  display:none;
+
+}
+.Map{
+    
+    width:5px;
+    height:5px;
+
+}
+
+ header{
+     height:250px;
+     background-position: 0 -30px;
+ }
+
+ header .Mobile{
+     display:inline-block;
+ }
+
+ header .Desktop{
+     display:None;
+ }
+}
+
+
+@media screen and (max-width: 500px) {
+
+header{
+    height:200px;
+    background-position: 0px;
+}
+.TextLocation{
+    display:none;
+  
+  }
+
+  #don, #dof{
+    display:none;
+  }
+
+
+}
+/* End of responsive rules */
+
+
+.features{
+    background:white;
+    color:gray;
+    padding: 25px;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+.features figure{
+
+    width:200px;
+    text-align:center;
+    margin:auto;
+    text-transform: uppercase;
+}
+
+.features figure img{
+border: 1px solid white;
+width:200px;
+border-radius:50%;
+box-shadow:gray 0 0 10px;
+}
+
+.imag{
+    background-color:white;
+    margin:35px, 0,0,0;
+    display:flex;
+    flex-direction: column;
+}
+
+
+
+
+.imag figure img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 83%;
+    height:90%;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.24);
+}
+
+.imag figure img:hover{
+opacity:0.7;
+}
+
+.imag figure figcaption{
+    text-align:center;
+    text-transform: uppercase;
+    color:gray;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size:22px;
+}
+
+
+.TextLocation{
+    height: 450px;
+    width: 600px;
+
+    position: absolute;
+    top: 55%;
+    left: 70%;
+    margin-top: -100px;
+    margin-left: -200px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size:25px;
+}
+
+#cont{
+    display:inline-block;
+    margin: auto;
+   width: 100%;
+   padding: 20px;
+    
+
+}
+
+
+#radio
+{
+  position:absolute;
+  top:0%;
+  left:0%;
+}
+#btn{
+  background:burlywood;
+}
+
+
+h1{
+    display:none;
+}
+
+h2{
+    display:none;
+}
+.contbod{
+
+  background-image: url("../images/interior2.jpg");
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.locbod{
+  background-image: url("../images/interior2.jpg");
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+
+#2contact{
+  display:flex;
+}
+
+footer{
+    background:black;
+    color:gray;
+    font-size:15px;
+    letter-spacing: 5px;
+    text-align:center;
+    padding: 10px;
+}
+
+
+/* Fading animation 1*/
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+
+/* Fade in animation 2 */
+.fade-in {
+    animation: fadeIn ease 10s;
+    -webkit-animation: fadeIn ease 10s;
+    -moz-animation: fadeIn ease 10s;
+    -o-animation: fadeIn ease 10s;
+    -ms-animation: fadeIn ease 10s;
+  }@keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-o-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+  }
+
+  }
+  
