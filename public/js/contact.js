@@ -8,5 +8,5 @@ var mail = document.getElementById("mail");
 var prod = document.getElementById("prod");
 var adress = document.getElementsByClassName("adresa");
 
-alert(name.value);
+
 }

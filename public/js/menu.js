@@ -31,7 +31,7 @@ document.body.addEventListener("keypress", function onKeyPress1(event) {
         }
       });
     }
-  });
+  },true);
 
 
   function randomInt(a, b) {

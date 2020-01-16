@@ -134,8 +134,9 @@ body{
 #don, #dof{
 background:burlywood;
 border: 3px solid black;
-width:100px;
-height:50px;
+width:120px;
+height:30px;
+border-radius:12%;
 
 
 }

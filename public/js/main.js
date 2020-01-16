@@ -32,15 +32,26 @@ function fun(e)
 }
 
 
+
 var log = document.getElementsByClassName("logo");
 
 log[0].addEventListener("click",logofun);
 
+var myWindow;
+
 function logofun(){
 
-alert("Bine ati venit!");
+    myWindow = window.open("", "myWindow", "width=200, height=100");
+    myWindow.document.write("<p style='color:violet;text-align:center;letter-spacing:5px;background:brown;'>Bine ati venit!</p>");
+    i = 0;
 
 }
+
+
+
+
+
+
 
 var elchange = document.getElementById("schimba1").addEventListener("dblclick",fun3);
 
