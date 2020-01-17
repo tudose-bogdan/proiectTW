@@ -3,7 +3,7 @@
 document.body.addEventListener("keypress", function onKeyPress1(event) {
     if (event.key === "c") {
 
-        alert("apasat c");
+        alert("Start animatie");
       // După prima apăsare dezactivez această funcționalitate
       document.body.removeEventListener("keypress", onKeyPress1);
 
@@ -13,7 +13,7 @@ document.body.addEventListener("keypress", function onKeyPress1(event) {
       document.body.addEventListener("keypress", function onKeyPress2(event) {
         if (event.key === "s") {
 
-            alert("apasat s");
+            alert("Sfarsit animatie");
           document.body.removeEventListener("keypress", onKeyPress2);
 
           // Oprește-te din colorat aleator celulele

@@ -36,21 +36,16 @@ function fun(e)
 var log = document.getElementsByClassName("logo");
 
 log[0].addEventListener("click",logofun);
-
+var no = 0;
 var myWindow;
 
 function logofun(){
-
+   
     myWindow = window.open("", "myWindow", "width=200, height=100");
     myWindow.document.write("<p style='color:violet;text-align:center;letter-spacing:5px;background:brown;'>Bine ati venit!</p>");
     i = 0;
 
 }
-
-
-
-
-
 
 
 var elchange = document.getElementById("schimba1").addEventListener("dblclick",fun3);
@@ -70,6 +65,21 @@ function fun3(e)
 
 
 }
+
+
+
+var elchange2 = document.getElementById("schimba3").addEventListener("dblclick",fun4);
+
+function fun4()
+{
+   
+    var log = document.querySelector(".logo a");
+
+  
+  
+    
+}
+
 
 //dark mode
 
@@ -128,7 +138,5 @@ function darkof()
     b3.style.backgroundSize = "100%";
     b3.style.backgroundPosition="center";
   
-
-
-    
+ 
 }

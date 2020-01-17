@@ -34,13 +34,26 @@ function fun2()
 var log = document.getElementsByClassName("logo");
 
 var clicks = 0; // counter 
+
+
+
 log[0].onclick = function(b)
-{
-    console.log(++clicks);
-    if(clicks % 5 == 0)
-    {
-        alert("sau dat " + clicks + " clickuri");
+{  
+  
+    if(typeof(Storage) !== "undefined") {
+        if (localStorage.clickcount) {
+          localStorage.clickcount = Number(localStorage.clickcount)+1;
+        } else {
+          localStorage.clickcount = 1;
+        }
     }
+    if(localStorage.clickcount % 5 ==0)
+    alert(localStorage.clickcount);
+    //console.log(++clicks);
+   // if(clicks % 5 == 0)
+    //{
+      //  alert("sau dat " + clicks + " clickuri");
+  //  }
 }
 
 
